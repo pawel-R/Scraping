@@ -1,6 +1,10 @@
 import requests
 from bs4 import BeautifulSoup
 
+"""
+This code scrap a phones from www.x-kom.pl and load it page by page.
+"""
+
 
 s = 0
 
