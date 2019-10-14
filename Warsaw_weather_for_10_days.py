@@ -38,7 +38,7 @@ for k, v in enumerate(day_Name):
     descriptions.append(descr.text)
 
 # Write 2 lists to .csv file as 2 rows.
-with open("test4.csv", "w", newline="") as file:
+with open("weather.csv", "w", newline="") as file:
     thewriter = csv.writer(file)
     thewriter.writerow(days)
     thewriter.writerow(descriptions)
@@ -59,7 +59,7 @@ with open("weather_10_days.txt", "r") as file:
     x = data.split("+++++++++++++++")
 
 # Add each day parameters as a row
-with open("test4.csv", "a", newline="") as file:
+with open("weather.csv", "a", newline="") as file:
     thewriter = csv.writer(file)
 
     x.pop(-1)
@@ -69,11 +69,11 @@ with open("test4.csv", "a", newline="") as file:
         thewriter.writerow(z)
 
 # Using pandas open .csv file and make a table.
-df = pd.read_csv("test4.csv", sep=",",  encoding='latin-1')
+df = pd.read_csv("weather.csv", sep=",",  encoding='latin-1')
 print(df.head())
 
 # Save as a final .csv file.
-df.to_csv("test_pogody.csv")
+df.to_csv("weather.csv")
 
 
 
